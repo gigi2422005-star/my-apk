@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MochiCafe - Delicious Cakes & Premium Coffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🧁 MochiCafe</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#cakes">Cakes</a></li>
+                        <li><a href="#coffee">Coffee</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <p class="student-info">Su Sandi Maung ID-240702402415</p>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to MochiCafe</h1>
+            <p>Indulge in our handcrafted cakes and premium coffee blends. Every bite and sip is a journey to sweet perfection.</p>
+            <a href="#cakes" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <div class="cart">
+        <h3>🛒 Your Cart</h3>
+        <div id="cart-items"></div>
+        <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+        <button class="cta-button" onclick="checkout()" style="width: 100%; margin-top: 1rem;">Checkout</button>
+    </div>
+
+    <section id="cakes" class="products">
+        <div class="container">
+            <h2 class="section-title">Handcrafted Cakes</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/a9/d7/0e/a9d70e77b2d2bbb11bc9c4f1fdf987ca.jpg" alt="Chocolate Mochi Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mochi Set</h3>
+                        <p>Chewy, flavorful mochi in a rainbow of fruit tastes and colors,a perfect pick for mochi lovers.</p>
+                        <div class="price">$24.99</div>
+                        <button class="add-to-cart" onclick="addToCart('Chocolate Mochi Cake', 24.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/d1/4b/41/d14b41490e68e896422a9c1959307edb.jpg" alt="Strawberry Cream Delight">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chocolate cake</h3>
+                        <p>Rich chocolate cake topped with fresh strawberry and fluffy whipped cream.</p>
+                        <div class="price">$22.99</div>
+                        <button class="add-to-cart" onclick="addToCart('Strawberry Cream Delight', 22.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/38/5a/9c/385a9c1da55911e23c08bf13e2973ae6.jpg" alt="Matcha Cupcakes (6 pack)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Matcha Cupcakes (6 pack)</h3>
+                        <p>Premium matcha cupcakes with cream frosting.</p>
+                        <div class="price">$18.99</div>
+                        <button class="add-to-cart" onclick="addToCart('Matcha Cupcakes (6 pack)', 18.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/40/4e/df/404edfb2d2ec8f610def6caa88616a55.jpg" alt="Caramel Flan">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caramel Flan</h3>
+                        <p>Silky smooth caramel flan with a rich caramel sauce.</p>
+                        <div class="price">$16.99</div>
+                        <button class="add-to-cart" onclick="addToCart('Caramel Flan', 16.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coffee" class="products">
+        <div class="container">
+            <h2 class="section-title">Premium Coffee</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/4e/30/22/4e3022cd5102cd061cb05ac61b903bc6.jpg" alt="Signature IceLatte Mochi">
+                    </div>
+                    <div class="product-info">
+                        <h3>Signature IceLatte Mochi</h3>
+                        <p>A creamy latte topped with soft, delicate mochi – a delightful treat that warms your heart</p>
+                        <div class="price">$5.99</div>
+                        <button class="add-to-cart" onclick="addToCart('Signature Mochi Latte', 5.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/e0/b6/da/e0b6da2508dc2ec8603ee43a83b5c0ea.jpg" alt="Matcha Latte">
+                    </div>
+                    <div class="product-info">
+                        <h3>Matcha Latte</h3>
+                        <p>Authentic Japanese matcha powder with perfectly steamed milk.</p>
+                        <div class="price">$6.49</div>
+                        <button class="add-to-cart" onclick="addToCart('Matcha Latte', 6.49)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/4e/6c/09/4e6c0968afbc5f4bc38067c15352817c.jpg" alt="Cold Brew Coffee">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cold Brew Coffee</h3>
+                        <p>Smooth, rich cold brew coffee served over ice with optional cream.</p>
+                        <div class="price">$4.99</div>
+                        <button class="add-to-cart" onclick="addToCart('Cold Brew Coffee', 4.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/c1/f7/bd/c1f7bdf8f202982a1f91ee8ad4447fac.jpg" alt="Brown Sugar Bubble Tea">
+                    </div>
+                    <div class="product-info">
+                        <h3>Brown Sugar Bubble Tea</h3>
+                        <p>Creamy milk tea with brown sugar syrup and chewy tapioca pearls.</p>
+                        <div class="price">$7.99</div>
+                        <button class="add-to-cart" onclick="addToCart('Brown Sugar Bubble Tea', 7.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>📍 123 Sweet Street, Café District</p>
+                    <p>📞 (555) 123-CAKE</p>
+                    <p>📧 hello@mochicafe.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <p>Monday - Friday: 7:00 AM - 9:00 PM</p>
+                    <p>Saturday: 8:00 AM - 10:00 PM</p>
+                    <p>Sunday: 8:00 AM - 8:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Instagram 📷</a></li>
+                        <li><a href="#">Facebook 👥</a></li>
+                        <li><a href="#">Twitter 🐦</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; 2024 MochiCafe. All rights reserved. Made with ❤️ and lots of coffee.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
